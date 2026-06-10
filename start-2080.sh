@@ -20,7 +20,7 @@ cd ~/dev/llama.cpp
   --spec-draft-n-max 2 \
   -b 2048 \
   -ub 512 \
-  -c 65536 \
+  -c 131072 \
   --flash-attn on \
   --parallel 1 \
   --temp 1.0 \
