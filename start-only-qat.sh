@@ -11,13 +11,15 @@ cd ~/dev/llama.cpp
 
 ./build/bin/llama-server \
   -m gemma-4-12B-it-qat-UD-Q4_K_XL.gguf \
+  --mmproj mmproj-BF16.gguf \
+  -c 128000 \
   -ngl 99 \
-  --parallel 1 \
-  -c 131072 \
-  --ctk q8_0 \
-  --ctv q4_0 \
+  -ctk q8_0 \
+  -ctv q8_0 \
+  -kvu \
   --no-mmap \
   --flash-attn on \
+  --parallel 1 \
   --temp 1.0 \
   --top-p 0.95 \
   --top-k 64 \
