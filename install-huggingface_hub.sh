@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 #Petit script pour installer huggingface_hub
-le tout dernier gemma4:12b avec QAT et MTP pour une RTX 2080 avec seulement 8GB de RAM sur le CPU
-#zf260609.1609
+#zf260609.1609, zf260610.0919
 
 # source: https://www.reddit.com/r/LocalLLaMA/comments/1typjmc/120_toks_on_12gb_vram_with_gemma_4_12b_qat_mtp/?show=original
 
