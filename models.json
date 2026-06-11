@@ -1,0 +1,17 @@
+{
+  "providers": {
+    "ollama": {
+      "baseUrl": "http://192.168.0.194:8080/v1",
+      "api": "openai-completions",
+      "apiKey": "ollama",
+      "models": [
+        {
+          "id": "gemma-4-12B-it-qat-UD-Q4_K_XL.gguf",
+          "input": ["text", "image"],
+          "reasoning": true
+        },
+        { "id": "tototutu" }
+      ]
+    }
+  }
+}
