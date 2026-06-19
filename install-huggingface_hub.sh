@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #Petit script pour installer huggingface_hub
-#zf260609.1609, zf260619.1801
+#zf260609.1609, zf260619.1814
 
 # source: https://www.reddit.com/r/LocalLLaMA/comments/1typjmc/120_toks_on_12gb_vram_with_gemma_4_12b_qat_mtp/?show=original
 
@@ -23,16 +23,14 @@ hf download google/gemma-4-12B-it-qat-q4_0-gguf gemma-4-12b-it-qat-q4_0.gguf --l
 hf download unsloth/gemma-4-12B-it-qat-GGUF gemma-4-12B-it-qat-UD-Q4_K_XL.gguf --local-dir .
 hf download Janvitos/gemma-4-12B-it-qat-assistant-MTP-Q8_0-GGUF gemma-4-12B-it-qat-assistant-MTP-Q8_0.gguf --local-dir .
 
+
+
+cd ~/dev/llama.cpp
+source .venv/bin/activate
 alias huggingface-cli=hf
 
-huggingface-cli download unsloth/Qwen3.6-35B-A3B-GGUF \
-  Qwen3.6-35B-A3B-Q3_K_M.gguf \
-  --local-dir .
-
-# 4. Téléchargez le projecteur visuel officiel fourni par Unsloth
-huggingface-cli download unsloth/Qwen3.6-35B-A3B-GGUF \
-  mmproj-F16.gguf \
-  --local-dir .
+huggingface-cli download unsloth/Qwen3.6-35B-A3B-GGUF Qwen3.6-35B-A3B-UD-Q3_K_M.gguf --local-dir .
+huggingface-cli download unsloth/Qwen3.6-35B-A3B-GGUF  mmproj-F16.gguf --local-dir .
 
 
 
