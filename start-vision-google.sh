@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 #Petit script pour démarrer le serveur llama.ccp avec le tout dernier gemma4:12b de Google mais avec la possibilité de vision d'images et optimisé pour la RTX 20280 11GB/7GB !
-#zf260608.1407, zf260611.0921
+#zf260608.1407, zf260621.1113
 
 # source: https://www.reddit.com/r/LocalLLaMA/comments/1typjmc/120_toks_on_12gb_vram_with_gemma_4_12b_qat_mtp/?show=original
 
 cd ~/dev/llama.cpp
 
 ./build/bin/llama-server \
-  -m gemma-4-12b-it-qat-q4_0.gguf \
-  --mmproj mmproj-gemma-4-12b-it-qat-q4_0.gguf \
+  -m ~/models/gemma-4-12b-it-qat-q4_0.gguf \
+  --mmproj ~/models/mmproj-gemma-4-12b-it-qat-q4_0.gguf \
   -c 128000 \
   -ngl 99 \
   -ctk q8_0 \
