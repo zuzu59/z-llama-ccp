@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #Petit script pour démarrer le serveur llama.ccp avec le tout dernier qwen3.6 avec vision
-#zf260608.1407, zf260621.1112
+#zf260608.1407, zf260621.1126
 
 # source: 
 
@@ -14,7 +14,7 @@ cd ~/dev/llama.cpp
   -m ~/models/Qwen3.6-35B-A3B-UD-Q3_K_M.gguf \
   --mmproj ~/models/mmproj-F16.gguf \
   --parallel 1 \
-  -c 131072 \
+  -c 262144 \
   --flash-attn on \
   -ngl 99 \
   --host 0.0.0.0 \
