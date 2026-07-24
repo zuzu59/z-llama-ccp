@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #Petit script pour démarrer le serveur llama.ccp avec le tout dernier ornith1.0:9b avec vision
-#zf260608.1407, zf260714.2252
+#zf260608.1407, zf260724.1220
 
 # source: 
 
@@ -20,7 +20,7 @@ cd ~/dev/llama.cpp
   --mmproj ~/models/mmproj-deepreinforce-ai_Ornith-1.0-35B-bf16.gguf \
   --host 0.0.0.0 \
   --port 8080 \
-  -ngl 50 \
+  -ngl 40 \
   -fit off \
   -c 262144 \
   -np 1 \
@@ -31,88 +31,5 @@ cd ~/dev/llama.cpp
   -t 8
 
 exit
-
-
-./build/bin/llama-server \
-  -m ~/models/deepreinforce-ai_Ornith-1.0-35B-Q4_K_M.gguf \
-  --mmproj ~/models/mmproj-deepreinforce-ai_Ornith-1.0-35B-bf16.gguf \
-  --host 0.0.0.0 \
-  --port 8080 \
-  -ngl 50 \
-  -c 262144 \
-  -np 1 \
-  -ctk q4_0 \
-  -ctv q4_0 \
-  --flash-attn on \
-  -b 512 \
-  -t 8
-
-
-exit
-
-./build/bin/llama-server \
-  -m ~/models/deepreinforce-ai_Ornith-1.0-35B-Q4_K_M.gguf \
-  --mmproj ~/models/mmproj-deepreinforce-ai_Ornith-1.0-35B-bf16.gguf \
-  --host 0.0.0.0 \
-  --port 8080 \
-  -ngl 99 \
-  -c 262144 \
-  -np 1 \
-  -ctk q4_0 \
-  -ctv q4_0 \
-  --flash-attn on \
-  -b 2048 \
-  -t 8
-
-
-exit
-
-
-./build/bin/llama-server \
-  -m ~/models/deepreinforce-ai_Ornith-1.0-35B-Q4_K_M.gguf \
-  --mmproj ~/models/mmproj-deepreinforce-ai_Ornith-1.0-35B-bf16.gguf \
-  --host 0.0.0.0 \
-  --port 8080 \
-  -ngl 99 \
-  -c 262144 \
-  -ctk q4_0 \
-  -ctv q4_0 \
-  --flash-attn on \
-  -b 2048 \
-  -t 8
-
-
-exit
-
-./build/bin/llama-server \
-  -m ~/models/deepreinforce-ai_Ornith-1.0-9B-Q8_0.gguf \
-  --mmproj ~/models/mmproj-deepreinforce-ai_Ornith-1.0-9B-bf16.gguf \
-  --port 8080 \
-  --host 0.0.0.0 \
-  -ngl 99 \
-  -c 262144 \
-  -ctk q4_0 \
-  -ctv q4_0 \
-  --flash-attn on \
-  -b 2048 \
-  -t 8
-
-
-
-exit
-
-
-
-
-./build/bin/llama-server \
-  -m ~/models/Qwen3.6-35B-A3B-UD-Q3_K_M.gguf \
-  --mmproj ~/models/mmproj-F16.gguf \
-  --parallel 1 \
-  -c 262144 \
-  --flash-attn on \
-  -ngl 99 \
-  --host 0.0.0.0 \
-  --port 8080
-
 
 
