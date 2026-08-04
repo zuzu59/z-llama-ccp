@@ -1,6 +1,6 @@
 #!/bin/bash
 # Petit script pour retrouver ses clefs ssh quand le pod est reconstruit
-#zf260804.1427
+#zf260804.1427, zf260804.1654
 
 
 # use: /workspace/init_pod.sh
@@ -28,4 +28,14 @@ if [ -z "$SSH_AUTH_SOCK" ]; then
 fi
 INNER_EOF
 
+ssh -T git@github.com
+
 echo "✅ Environnement SSH restauré avec succès."
+
+#apt update
+apt install htop nvtop
+/workspace/deploy-proxmox/env_a_zuzu.sh
+export LANG=C.UTF-8
+source /workspace/deploy-proxmox/alias
+echo "✅ Environnement SSH restauré avec succès."
+
