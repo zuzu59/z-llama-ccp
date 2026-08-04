@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #Petit script pour installer huggingface_hub
-#zf260609.1609, zf260619.1814
+#zf260609.1609, zf260804.1435
 
 # source: https://www.reddit.com/r/LocalLLaMA/comments/1typjmc/120_toks_on_12gb_vram_with_gemma_4_12b_qat_mtp/?show=original
 
@@ -28,6 +28,14 @@ hf download Janvitos/gemma-4-12B-it-qat-assistant-MTP-Q8_0-GGUF gemma-4-12B-it-q
 cd ~/dev/llama.cpp
 source .venv/bin/activate
 alias huggingface-cli=hf
+
+
+huggingface-cli download bartowski/deepreinforce-ai_Ornith-1.0-9B-GGUF deepreinforce-ai_Ornith-1.0-9B-Q8_0.gguf --local-dir ~/models
+huggingface-cli download bartowski/deepreinforce-ai_Ornith-1.0-9B-GGUF mmproj-deepreinforce-ai_Ornith-1.0-9B-bf16.gguf --local-dir ~/models
+
+
+
+exit
 
 huggingface-cli download unsloth/Qwen3.6-35B-A3B-GGUF Qwen3.6-35B-A3B-UD-Q3_K_M.gguf --local-dir .
 huggingface-cli download unsloth/Qwen3.6-35B-A3B-GGUF  mmproj-F16.gguf --local-dir .
