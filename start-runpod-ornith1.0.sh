@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #Petit script pour démarrer le serveur llama.ccp avec le tout dernier ornith1.0:35b avec vision
-#zf260608.1407, zf260804.1517
+#zf260608.1407, zf260804.1550
 
 # source: 
 
@@ -16,8 +16,8 @@
 cd /workspace/llama.cpp
 
 ./build/bin/llama-server \
-  -m /workpsace/models/deepreinforce-ai_Ornith-1.0-35B-Q4_K_M.gguf \
-  --mmproj /workspace/mmproj-deepreinforce-ai_Ornith-1.0-35B-bf16.gguf \
+  -m /workspace/models/deepreinforce-ai_Ornith-1.0-35B-Q4_K_M.gguf \
+  --mmproj /workspace/models/mmproj-deepreinforce-ai_Ornith-1.0-35B-bf16.gguf \
   --host 0.0.0.0 \
   --port 8000 \
   -ngl 40 \
