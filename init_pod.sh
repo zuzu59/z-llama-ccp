@@ -1,6 +1,6 @@
 #!/bin/bash
 # Petit script pour retrouver ses clefs ssh quand le pod est reconstruit
-#zf260804.1427, zf260804.1658
+#zf260804.1427, zf260804.1721
 
 
 # use: source /workspace/init_pod.sh
@@ -11,7 +11,10 @@ Usage:
 
 source /workspace/z-llama-ccp/init_pod.sh
 
-et si c'est la 1ère fois, il faut faire un apt update avant !
+et si c'est la toute 1ère fois que le pod démarre, il faut faire avant:
+
+/workspace/z-llama-ccp/init_apt.sh
+
 ctrl-c pour arrêter
 
 "
@@ -44,6 +47,14 @@ ssh -T git@github.com
 echo "✅ Environnement SSH restauré avec succès."
 
 #apt update
+
+rm -rf /var/lib/apt/lists
+ln -s /workspace/apt/lists /var/lib/apt/lists
+rm -rf /var/cache/apt/archives
+ln -s /workspace/apt/archives /var/cache/apt/archives
+
+
+
 apt install htop nvtop
 /workspace/deploy-proxmox/env_a_zuzu.sh
 export LANG=C.UTF-8
