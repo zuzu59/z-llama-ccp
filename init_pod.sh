@@ -1,25 +1,14 @@
 #!/bin/bash
 # Petit script pour retrouver ses clefs ssh quand le pod est reconstruit
-#zf260804.1427, zf260806.1949
+#zf260804.1427, zf260806.2002
 
 #set -e -v -x
-set -v
+#set -v
 
 
-read -p "
+read -p $'\nUsage:\n\n\e[45m\e[97msource /workspace/z-llama-ccp/init_pod.sh\e[0m \n\net si c\'est la toute 1ère fois que le pod démarre, il faut faire avant: \n\n/workspace/z-llama-ccp/init_apt.sh\n\nctrl-c pour arrêter\n'
 
-Usage: 
 
-source /workspace/z-llama-ccp/init_pod.sh
-
-et si c'est la toute 1ère fois que le pod démarre, il faut faire avant:
-
-/workspace/z-llama-ccp/init_apt.sh
-
-ctrl-c pour arrêter
-
-"
-#read -p "Etes-vous certain de vouloir continuer ?"
 
 
 # 1. Restauration des clés SSH
