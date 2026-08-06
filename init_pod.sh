@@ -1,9 +1,10 @@
 #!/bin/bash
 # Petit script pour retrouver ses clefs ssh quand le pod est reconstruit
-#zf260804.1427, zf260804.1721
+#zf260804.1427, zf260806.1949
 
+#set -e -v -x
+set -v
 
-# use: source /workspace/init_pod.sh
 
 read -p "
 
