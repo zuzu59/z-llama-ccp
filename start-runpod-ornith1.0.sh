@@ -19,7 +19,7 @@ cd /workspace/llama.cpp
   -m /workspace/models/deepreinforce-ai_Ornith-1.0-35B-Q4_K_M.gguf \
   --mmproj /workspace/models/mmproj-deepreinforce-ai_Ornith-1.0-35B-bf16.gguf \
   --host 0.0.0.0 \
-  --port 8000 \
+  --port 8888 \
   -ngl 40 \
   -fit off \
   -c 262144 \
