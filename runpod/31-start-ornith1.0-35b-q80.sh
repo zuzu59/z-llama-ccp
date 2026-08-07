@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #Petit script pour démarrer le serveur llama.ccp avec le tout dernier ornith1.0:35b-q80 avec vision
-#zf260608.1407, zf260807.1456
+#zf260608.1407, zf260807.1506
 
 # source: 
 
@@ -20,14 +20,14 @@ cd /workspace/llama.cpp
   --mmproj /workspace/models/mmproj-deepreinforce-ai_Ornith-1.0-35B-bf16.gguf \
   --host 0.0.0.0 \
   --port 8888 \
-  -ngl 40 \
+  -ngl 90 \
   -fit off \
   -c 262144 \
   -np 1 \
-  -ctk q4_0 \
-  -ctv q4_0 \
+  -ctk f16 \
+  -ctv f16 \
   --flash-attn on \
-  -b 512 \
+  -b 2048 \
   -t 8
 
 exit
