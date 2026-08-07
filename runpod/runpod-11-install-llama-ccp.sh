@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #Petit script pour installer le serveur llama.cpp sur runpod en copiant directement, sans compiler, le binaire depuis github
 #Cette astuce permet de gagner 20 minutes de copilation
-#zf260609.1606, zf260806.1817
+#zf260609.1606, zf260807.1120
 
 # source: https://github.com/ai-dock/llama.cpp-cuda/releases
 
@@ -26,7 +26,7 @@ mv cuda-12.8/* ./
 
 # superbe astuce de google ia pour avoir le bon path dans toutes les lib llama.cpp comme si on l'avait compilé sur cette machine
 
-#apt-get update && apt-get install -y patchelf
+apt install -y patchelf
 
 for f in $FOLDER_LLAMA/*; do
     if [ ! -d "$f" ]; then
