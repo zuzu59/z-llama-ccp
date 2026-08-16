@@ -1,19 +1,18 @@
 #!/usr/bin/env bash
 #Petit script pour installer le serveur llama.cpp sur runpod en copiant directement, sans compiler, le binaire depuis github
 #Cette astuce permet de gagner 20 minutes de copilation
-#zf260609.1606, zf260816.1337
+#zf260609.1606, zf260815.1135
 
 # source: https://github.com/ai-dock/llama.cpp-cuda/releases
-# source: https://github.com/ggml-org/llama.cpp/releases
+
 
 #set -e -v -x
 #set -v -x
-set -v
+#set -v
 
 export FOLDER_LLAMA="/workspace/llama.cpp/build/bin"
-export VERSION_LLAMA="b10452"
-#export URL_GITHUB_LLAMA="https://github.com/ai-dock/llama.cpp-cuda/releases/download/$VERSION_LLAMA/llama.cpp-$VERSION_LLAMA-cuda-12.8-amd64.tar.gz"
-export URL_GITHUB_LLAMA="https://github.com/ggml-org/llama.cpp/releases/download/$VERSION_LLAMA/llama-$VERSION_LLAMA-bin-ubuntu-x64.tar.gz"
+export VERSION_LLAMA="b10435"
+export URL_GITHUB_LLAMA="https://github.com/ai-dock/llama.cpp-cuda/releases/download/$VERSION_LLAMA/llama.cpp-$VERSION_LLAMA-cuda-12.8-amd64.tar.gz"
 
 
 
@@ -22,10 +21,8 @@ cd $FOLDER_LLAMA
 wget $URL_GITHUB_LLAMA
 
 tar -xzf llama* --no-same-owner
-
-
-rm llama-VERSION_LLAMA*.gz
-mv llama-$VERSION_LLAMA/* ./
+rm llama*
+mv cuda-12.8/* ./
 
 # On vérifie si le dossier de cache d'APT contient des fichiers de dépôts
 if [ -n "$(ls -A /var/lib/apt/lists/ 2>/dev/null | grep -v 'partial')" ]; then
