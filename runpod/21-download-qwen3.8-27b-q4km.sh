@@ -23,6 +23,9 @@ huggingface-cli download bartowski/Qwen3.8-27B-GGUF Qwen3.8-27B-Q4_K_M.gguf --lo
 
 # 2. Télécharger le projecteur visuel en version f16 (Multimodal / Vision)
 #huggingface-cli download prithivMLmods/Qwen3.8-27B-GGUF Qwen3.8-27B.mmproj-f16.gguf --local-dir /workspace/models
+huggingface-cli download bartowski/Qwen3.8-27B-GGUF mmproj-Qwen3.8-27B-f16.gguf --local-dir /workspace/models
+
+
 
 exit
 

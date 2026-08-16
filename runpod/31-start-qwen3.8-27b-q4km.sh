@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #Petit script pour démarrer le serveur llama.ccp avec le tout dernier qwen 3.8:27b avec vision
-#zf260608.1407, zf260816.1746
+#zf260608.1407, zf260816.1926
 
 # source: 
 
@@ -17,6 +17,7 @@ cd /workspace/llama.cpp
 
 ./build/bin/llama-server \
   -m /workspace/models/Qwen3.8-27B-Q4_K_M.gguf \
+  --mmproj /workspace/models/mmproj-Qwen3.8-27B-f16.gguf \
   --host 0.0.0.0 \
   --port 8888 \
   -ngl 90 \
