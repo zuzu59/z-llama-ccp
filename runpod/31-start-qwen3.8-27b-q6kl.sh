@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #Petit script pour démarrer le serveur llama.ccp avec le tout dernier qwen 3.8:27b avec vision
-#zf260608.1407, zf260817.1443
+#zf260608.1407, zf260817.1604
 
 # source: 
 
@@ -21,6 +21,7 @@
   --port 8888 \
   -ngl 99 \
   -c 262144 \
+  --n-predict -1 \
   -np 1 \
   -ctk f16 \
   -ctv f16 \
