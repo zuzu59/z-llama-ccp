@@ -18,8 +18,7 @@ alias huggingface-cli=hf
 #huggingface-cli download  bartowski/Qwen3.8-27B-Q4_K_M Qwen3.8-27B-Q4_K_M.gguf --local-dir /workspace/models
 #huggingface-cli download bartowski/Qwen3.8-27B-GGUF Qwen3.8-27B-Q4_K_M.gguf --local-dir /workspace/models
 
-hf download hf://unsloth/Qwen3.8-27B-GGUF/Qwen3.8-27B-UD-Q4_K_M.gguf --local-dir /workspace/models
-
+hf download hf://unsloth/Qwen3.8-27B-GGUF/Qwen3.8-27B-Q4_K_M.gguf --local-dir /workspace/models
 
 #llama serve -hf bartowski/Qwen3.8-27B-GGUF:Q4_K_M
 
