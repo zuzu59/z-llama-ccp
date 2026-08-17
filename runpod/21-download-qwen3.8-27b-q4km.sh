@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #Petit script pour descendre sur runpode le modèle qwen 3.8:27b depuis huggingface_hub
-#zf260609.1609, zf260816.1317
+#zf260609.1609, zf260817.2042
 
 # source: https://www.reddit.com/r/LocalLLaMA/comments/1typjmc/120_toks_on_12gb_vram_with_gemma_4_12b_qat_mtp/?show=original
 
@@ -16,7 +16,10 @@ alias huggingface-cli=hf
 
 # 1. Télécharger le fichier principal du modèle (Texte/Raisonnement)
 #huggingface-cli download  bartowski/Qwen3.8-27B-Q4_K_M Qwen3.8-27B-Q4_K_M.gguf --local-dir /workspace/models
-huggingface-cli download bartowski/Qwen3.8-27B-GGUF Qwen3.8-27B-Q4_K_M.gguf --local-dir /workspace/models
+#huggingface-cli download bartowski/Qwen3.8-27B-GGUF Qwen3.8-27B-Q4_K_M.gguf --local-dir /workspace/models
+
+hf download hf://unsloth/Qwen3.8-27B-GGUF/Qwen3.8-27B-UD-Q4_K_M.gguf --local-dir /workspace/models
+
 
 #llama serve -hf bartowski/Qwen3.8-27B-GGUF:Q4_K_M
 

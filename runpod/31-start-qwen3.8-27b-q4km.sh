@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #Petit script pour démarrer le serveur llama.ccp avec le tout dernier qwen 3.8:27b q4km avec vision
-#zf260608.1407, zf260817.1152
+#zf260608.1407, zf260817.2040
 
 # source: 
 
@@ -18,8 +18,9 @@
   --mmproj /workspace/models/mmproj-Qwen3.8-27B-f16.gguf \
   --host 0.0.0.0 \
   --port 8888 \
-  -ngl 90 \
+  -ngl 99 \
   -c 262144 \
+  --n-predict -1 \
   -np 1 \
   -ctk f16 \
   -ctv f16 \
@@ -29,4 +30,6 @@
   --image-min-tokens 1024 \
   --spec-type draft-mtp \
   --spec-draft-n-max 2
+
+
 
