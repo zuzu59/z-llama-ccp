@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #Petit script pour démarrer le serveur llama.ccp avec le tout dernier qwen 3.8:27b avec vision
-#zf260608.1407, zf26081122
+#zf260608.1407, zf260817.1202
 
 # source: 
 
