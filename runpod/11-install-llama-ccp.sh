@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #Petit script pour installer le serveur llama.cpp sur runpod en copiant directement, sans compiler, le binaire depuis github
 #Cette astuce permet de gagner 20 minutes de copilation
-#zf260609.1606, zf260817.1000
+#zf260609.1606, zf260818.1102
 
 # source: https://github.com/ai-dock/llama.cpp-cuda/releases
 
@@ -15,7 +15,6 @@ export FOLDER_LLAMA="/workspace/llama.cpp/build/bin"
 export LAST_RELEASE=$(curl -s "https://api.github.com/repos/ai-dock/llama.cpp-cuda/releases/latest" | grep -Po '"tag_name": "\K[^"]+')
 export VERSION_LLAMA=$LAST_RELEASE
 export URL_GITHUB_LLAMA="https://github.com/ai-dock/llama.cpp-cuda/releases/download/$VERSION_LLAMA/llama.cpp-$VERSION_LLAMA-cuda-12.8-amd64.tar.gz"
-
 
 
 mkdir -p $FOLDER_LLAMA
@@ -50,7 +49,9 @@ cd ../..
 pwd
 
 echo -e "
-llama.cpp installé !
+
+llama.cpp, version: $VERSION_LLAMA installé !
+
 "
 
 ./build/bin/llama-cli --list-devices
