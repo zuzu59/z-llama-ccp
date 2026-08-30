@@ -15,8 +15,9 @@
 
 cd /workspace/llama.cpp
 
+
 ./build/bin/llama-server \
-  -m /workspace/models/Ornith-1.5-35B-Q4_K_M.gguf \
+  -m /workspace/models/Ornith-1.5-35B-Q8_0.gguf \
   --mmproj /workspace/models/mmproj-Ornith-1.5-35B-BF16.gguf \
   --host 0.0.0.0 \
   --port 8888 \
