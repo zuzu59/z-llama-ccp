@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-#Petit script pour descendre sur runpode le modèle ornith1.5-35b-80 uncensored depuis huggingface_hub
-#zf260609.1609, zf260830.1331
+#Petit script pour descendre sur runpode le modèle ornith1.5-35b-6k uncensored depuis huggingface_hub
+#zf260609.1609, zf260831.1835
 
 # source: https://huggingface.co/dealignai/Ornith-1.5-35B-A3B-UNCENSORED-GGUF/tree/main
 
@@ -23,8 +23,8 @@ alias huggingface-cli=hf
 
 #https://huggingface.co/ornith-ai/Ornith-1.5-35B-A3B-GGUF/resolve/main/mmproj-Ornith-1.5-35B-BF16.gguf?download=true
 
-https://huggingface.co/dealignai/Ornith-1.5-35B-A3B-UNCENSORED-GGUF/resolve/main/Ornith-1.5-35B-A3B-CRACK-Q8_0.gguf?download=true
+#https://huggingface.co/dealignai/Ornith-1.5-35B-A3B-UNCENSORED-GGUF/resolve/main/Ornith-1.5-35B-A3B-CRACK-Q8_0.gguf?download=true
 
-huggingface-cli download dealignai/Ornith-1.5-35B-A3B-UNCENSORED-GGUF Ornith-1.5-35B-A3B-CRACK-Q8_0.gguf --local-dir /workspace/models
+huggingface-cli download dealignai/Ornith-1.5-35B-A3B-UNCENSORED-GGUF Ornith-1.5-35B-A3B-CRACK-Q6_K.gguf --local-dir /workspace/models
 huggingface-cli download ornith-ai/Ornith-1.5-35B-A3B-GGUF mmproj-Ornith-1.5-35B-BF16.gguf --local-dir /workspace/models
 
