@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #Petit script pour démarrer le serveur llama.ccp avec le tout dernier ornith1.5:35b avec vision
-#zf260608.1407, zf260830.1336, zf260916.1120
+#zf260608.1407, zf260830.1336, zf260916.1153
 
 # source: 
 
@@ -25,7 +25,7 @@ cd /workspace/llama.cpp
   -fit off \
   -c 262144 \
   --context-shift \
-  -np 1 \
+  -np 3 \
   -ctk q4_0 \
   -ctv q4_0 \
   --flash-attn on \
