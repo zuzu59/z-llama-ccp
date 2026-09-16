@@ -24,17 +24,21 @@ cd /workspace/llama.cpp
   -ngl 99 \
   -fit off \
   -c 262144 \
-  --context-shift \
   -np 1 \
   -ctk q4_0 \
   -ctv q4_0 \
   --flash-attn on \
-  -b 4096 \
+  -b 2028 \
+  -ub 1024 \
   -t 8 \
   --image-min-tokens 1024 \
-  --spec-type draft-mtp \
-  --spec-draft-n-max 2 \
-  --cont-batching
+  --no-reasoning-preserve \
+  --cache-ram 16384
+
+
+
+
+
 
 exit
 
