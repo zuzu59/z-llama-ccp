@@ -25,7 +25,7 @@ cd /workspace/llama.cpp
   -fit off \
   -c 262144 \
   --context-shift \
-  -np 3 \
+  -np 1 \
   -ctk q4_0 \
   -ctv q4_0 \
   --flash-attn on \
