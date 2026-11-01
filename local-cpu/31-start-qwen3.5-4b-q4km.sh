@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #Petit script pour démarrer le serveur llama.ccp avec le qwen3.5:4b
-#zf260608.1407, zf260804.1550, zf261030.1458
+#zf260608.1407, zf260804.1550, zf261101.1218
 
 # source: 
 
@@ -19,12 +19,10 @@
   -m ./models/Qwen3.5-4B-Q4_K_M.gguf \
   --host 0.0.0.0 \
   --port 8888 \
-  -ngl 0 \
-  -c 32000 \
+  -c 128000 \
   -np 1 \
   -b 512 \
-  -t 4 \
-  --ctx-shift
+  -t 8 \
 
 
 exit
